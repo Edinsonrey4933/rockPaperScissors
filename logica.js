@@ -8,8 +8,3 @@
     }
     
     getComputerChoice()
-    getComputerChoice()
-    getComputerChoice()
-    getComputerChoice()
-    getComputerChoice()
-    getComputerChoice()
