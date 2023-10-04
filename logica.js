@@ -4,19 +4,26 @@
         variable[1] = 'Papel';
         variable[2] = 'Tijera';
         aleatorio   = Math.floor(Math.random() * 3);
-        console.log( variable[aleatorio]);
         return variable[aleatorio];
     }
     
     getComputerChoice()
     
     function game(playerSelection,computerSelection){
+    playerSelection=playerSelection.toUpperCase();
+    computerSelection = computerSelection.toUpperCase();
+    console.log(computerSelection);
+    console.log(playerSelection);
+    
+    if (computerSelection == playerSelection) {
+      console.log("empate");
+    }else if((computerSelection=="PIEDRA" && playerSelection=="PAPEL")||(computerSelection=="TIJERA" && playerSelection=="PIEDRA")||(computerSelection=="PAPEL" && playerSelection=="TIJERA")){
       
-      if (playerSelection == computerSelection) {
-        console.log("empate");
-      }
-      
-      console.log (getComputerChoice().toUpperCase())
-      
+      console.log("Gana Jugador")
+    } else {
+      console.log("Gana PC")
     }
-    game("PIEDRA",getComputerChoice().toUpperCase());
+    
+     
+    }
+    game("TIJERA",getComputerChoice());
