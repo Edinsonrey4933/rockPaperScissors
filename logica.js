@@ -1,3 +1,7 @@
+   let pc=0;
+   let user=0;
+   let ingresoUser="";
+   
     function getComputerChoice () {
         variable    = new Array();
         variable[0] = 'Piedra';
@@ -7,23 +11,37 @@
         return variable[aleatorio];
     }
     
-    getComputerChoice()
-    
-    function game(playerSelection,computerSelection){
+    function verificaGanador(playerSelection,computerSelection){
     playerSelection=playerSelection.toUpperCase();
     computerSelection = computerSelection.toUpperCase();
     console.log(computerSelection);
     console.log(playerSelection);
     
     if (computerSelection == playerSelection) {
-      console.log("empate");
+      window.alert("empate");
     }else if((computerSelection=="PIEDRA" && playerSelection=="PAPEL")||(computerSelection=="TIJERA" && playerSelection=="PIEDRA")||(computerSelection=="PAPEL" && playerSelection=="TIJERA")){
       
-      console.log("Gana Jugador")
+      window.alert("Gana Jugador")
+      user=user+1;
     } else {
-      console.log("Gana PC")
+      window.alert("Gana PC")
+      pc=pc+1;
     }
     
      
     }
-    game("TIJERA",getComputerChoice());
+    
+    function game (){
+     while(user<=4 && pc<=4){
+     ingresoUser = prompt("Ingrese piedra papel o tijera")
+     verificaGanador(ingresoUser,getComputerChoice())
+     alert("Puntos user "+user+" Puntos Pc "+pc)
+    }
+  if (user=5){
+       alert("Gano Jugador")
+     }else if(pc=5){
+       alert("gano maquina")
+     }
+    }
+    game();
+ 
