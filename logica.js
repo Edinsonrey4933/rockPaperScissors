@@ -1,7 +1,6 @@
    let pc=0;
    let user=0;
-   let ingresoUser="";
-   
+   let ingresoUser=""; 
     function getComputerChoice () {
         variable    = new Array();
         variable[0] = 'Piedra';
@@ -26,9 +25,7 @@
     } else {
       window.alert("Gana PC")
       pc=pc+1;
-    }
-    
-     
+    } 
     }
     
     function game (){
